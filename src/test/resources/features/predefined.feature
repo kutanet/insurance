@@ -44,6 +44,7 @@ Feature: Smoke steps
     Then I type "Dr Watson" into element with xpath "//input[@id='Name']"
     Then I click on element with xpath "//button[1]"
     Then I switch to default content
+    Then I wait for 5 sec
 
 
 

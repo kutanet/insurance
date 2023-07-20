@@ -136,3 +136,5 @@ INFO 20:49:57:489 wdm.WebDriverManager resolveDriverVersion:1238 Using chromedri
 INFO 20:49:57:502 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
 INFO 11:22:29:370 wdm.WebDriverManager resolveDriverVersion:1238 Using chromedriver 114.0.5735.90 (resolved driver for Chrome 114)
 INFO 11:22:29:384 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+INFO 16:11:03:774 wdm.WebDriverManager resolveDriverVersion:1238 Using chromedriver 114.0.5735.90 (resolved driver for Chrome 114)
+INFO 16:11:03:785 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver

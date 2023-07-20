@@ -27,6 +27,7 @@ public class insuranceSteps {
         WebElement productList = getDriver().findElement(By.xpath("//select[@class='custom-select']"));
         Select listOfProducts=new Select(productList);
         listOfProducts.selectByVisibleText(var1);
+        System.out.println("Features ");
 
     }
 }
