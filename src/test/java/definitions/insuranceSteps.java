@@ -28,7 +28,7 @@ public class insuranceSteps {
         Select listOfProducts=new Select(productList);
         listOfProducts.selectByVisibleText(var1);
         System.out.println("Features ");
-        System.out.println("GITTT ");
+        System.out.println("GITTT lab ");
 
     }
 }
