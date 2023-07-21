@@ -59,20 +59,6 @@ Feature: Smoke steps
 
 
 
-    Then I wait for 5 sec
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
