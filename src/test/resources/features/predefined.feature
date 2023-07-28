@@ -13,11 +13,9 @@ Feature: Smoke steps
 
     Then I type "221b Baker street" into element with xpath "//input[@id='street']"
     Then I type "100" into element with xpath "//input[@id='suit-apt']"
-#    Then I wait for 1 sec
     Then I type "London" into element with xpath "//input[@id='city']"
-#    Then I wait for 1 sec
     Then I type "California" into element with xpath "//input[@id='state']"
-#    Then I wait for 1 sec
+#     I wait for 1 sec
     Then I type "N/A" into element with xpath "//textarea[@id='additional']"
 #    Then I wait for 1 sec
     Then I type "user" into element with xpath "//input[@id='username']"
