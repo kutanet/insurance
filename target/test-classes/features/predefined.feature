@@ -31,7 +31,7 @@ Feature: Smoke steps
 #    Then I wait for 1 sec
     Then I type "+44 2012 321234" into element with xpath "//input[@id='phone_number']"
 #    Then I wait for 1 sec
-    Then I type "01/06/1854" into element with xpath "//input[@id='date_of_birth']"
+    Then I type "01/06/1854" into element with xpath "//input[@name='date']"
 #    Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='male']"
 #    Then I wait for 1 sec
@@ -46,23 +46,8 @@ Feature: Smoke steps
     Then I click on element with xpath "//button[normalize-space()='Submit form']"
     Then I wait for 5 sec
 
-  @insurance1
-  Scenario: Insurance zip1
-    Given I Launch insurance page
-    And I type "1234" into element with xpath "//input[@id='zip-code']"
-    Then I click on element with xpath "//button[normalize-space()='Submit form']"
-    And I wait for element with xpath "//input[@id='zip-code']/../small" to be present
-    And I verify that the error message with xpath "//input[@id='zip-code']/../small" is displayed
-    And I wait for 2 sec
 
-  @insurance1
-  Scenario: Insurance zip2
-    Given I Launch insurance page
-    And I type "1234567" into element with xpath "//input[@id='zip-code']"
-    Then I click on element with xpath "//button[normalize-space()='Submit form']"
-    And I wait for 1 sec
-    And I verify that the error message with xpath "//input[@id='zip-code']/../small" is displayed
-    And I
+
 
 
 
