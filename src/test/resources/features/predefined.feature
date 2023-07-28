@@ -15,13 +15,9 @@ Feature: Smoke steps
     Then I type "100" into element with xpath "//input[@id='suit-apt']"
     Then I type "London" into element with xpath "//input[@id='city']"
     Then I type "California" into element with xpath "//input[@id='state']"
-#     I wait for 1 sec
     Then I type "N/A" into element with xpath "//textarea[@id='additional']"
-#    Then I wait for 1 sec
     Then I type "user" into element with xpath "//input[@id='username']"
-#    Then I wait for 1 sec
     Then I type "password" into element with xpath "//input[@id='password']"
-#    Then I wait for 1 sec
     Then I type "password" into element with xpath "//input[@id='retype_password']"
 #    Then I wait for 1 sec
     Then I type "sherlock@holmes.com" into element with xpath "//input[@id='email']"
