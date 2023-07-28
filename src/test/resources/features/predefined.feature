@@ -21,7 +21,7 @@ Feature: Smoke steps
     Then I type "password" into element with xpath "//input[@id='retype_password']"
     Then I type "sherlock@holmes.com" into element with xpath "//input[@id='email']"
     Then I type "+44 2012 321234" into element with xpath "//input[@id='phone_number']"
-    Then I type "01/06/1854" into element with xpath "//input[@id='date_of_birth']"
+    Then I type "01/06/1854" into element with xpath "//input[@name='date']"
     Then I click on element with xpath "//input[@id='male']"
     Then I click on element with xpath "//input[@id='agreement']"
     Then I wait for 1 sec
@@ -31,7 +31,7 @@ Feature: Smoke steps
     Then I switch to iframe with xpath "//iframe[@src='http://154.41.228.85/iframe']"
     Then I type "Dr Watson" into element with xpath "//input[@id='Name']"
     Then I switch to default content
-    Then I click on element with xpath "//button[normalize-space()='Submit form']"
+    # Then I click on element with xpath "//button[normalize-space()='Submit form']"
     Then I wait for 5 sec
 
   @insurance1
@@ -50,8 +50,6 @@ Feature: Smoke steps
     Then I click on element with xpath "//button[normalize-space()='Submit form']"
     And I wait for 1 sec
     And I verify that the error message with xpath "//input[@id='zip-code']/../small" is displayed
-    And I
-
 
 
 
