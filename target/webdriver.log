@@ -523,3 +523,6 @@ java.net.SocketException: Connection reset
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
 	at java.lang.Thread.run(Thread.java:1623) [?:?]
+ERROR 19:11:28:689 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 19:11:28:697 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 19:11:28:780 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
