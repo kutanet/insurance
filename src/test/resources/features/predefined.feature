@@ -4,13 +4,13 @@ Feature: Smoke steps
   @insurance1
   Scenario: Insurance smoke test
     Given I open url "http://154.41.228.85"
-#    Then I wait for 1 sec
+
     Then I type "Sherlock Holmes" into element with xpath "//input[@id='name']"
-#    Then I wait for 1 sec
+
     Then I choose "USA" from the country list
-#    Then I wait for 1 sec
+
     Then I type "91201" into element with xpath "//input[@id='zip-code']"
-#    Then I wait for 1 sec
+
     Then I type "221b Baker street" into element with xpath "//input[@id='street']"
 #    Then I wait for 1 sec
     Then I type "100" into element with xpath "//input[@id='suit-apt']"
