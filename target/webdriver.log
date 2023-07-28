@@ -685,3 +685,6 @@ INFO 23:03:40:568 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chr
 ERROR 23:05:17:569 online.HttpClient execute:176 Error HTTP 403 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
 WARN 23:05:17:583 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 403 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
 INFO 23:05:19:091 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/ruslank/.cache/selenium/chromedriver/mac64/114.0.5735.90/chromedriver
+ERROR 23:14:25:781 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 23:14:25:796 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 23:14:27:304 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/ruslank/.cache/selenium/chromedriver/mac64/114.0.5735.90/chromedriver
