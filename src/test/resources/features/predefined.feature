@@ -30,11 +30,11 @@ Feature: Smoke steps
     Then I type "sherlock@holmes.com" into element with xpath "//input[@id='email']"
     Then I wait for 1 sec
     Then I type "+44 2012 321234" into element with xpath "//input[@id='phone_number']"
-#    Then I wait for 1 sec
+
     Then I type "01/06/1854" into element with xpath "//input[@name='date']"
-#    Then I wait for 1 sec
+
     Then I click on element with xpath "//input[@id='male']"
-#    Then I wait for 1 sec
+    Then I wait for 5 sec
     Then I click on element with xpath "//input[@id='agreement']"
     Then I wait for 1 sec
     Then I choose "HOME" from the products list
