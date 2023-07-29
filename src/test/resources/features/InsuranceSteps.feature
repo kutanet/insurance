@@ -18,5 +18,7 @@ Feature: Smoke
       Then I wait for 2 sec
       Then I click on element with xpath "//button[normalize-space()='Submit form']"
       Then I wait for element with xpath "//div[@class='card application']//div[4]//div[1]//small[1]" to be present
-      Then I wait for 2 sec
+      # Then I wait for 2 sec
+
+
       
