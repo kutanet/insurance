@@ -23,9 +23,9 @@ Feature: Smoke steps
 #    Then I wait for 1 sec
     Then I type "user" into element with xpath "//input[@id='username']"
 #    Then I wait for 1 sec
-    Then I type "password" into element with xpath "//input[@id='password']"
+    Then I type "password!" into element with xpath "//input[@id='password']"
 #    Then I wait for 1 sec
-    Then I type "password" into element with xpath "//input[@id='retype_password']"
+    Then I type "password!" into element with xpath "//input[@id='retype_password']"
 #    Then I wait for 1 sec
     Then I type "sherlock@holmes.com" into element with xpath "//input[@id='email']"
 #    Then I wait for 1 sec
