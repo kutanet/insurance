@@ -28,8 +28,14 @@ public class insuranceSteps {
         Select listOfProducts=new Select(productList);
         listOfProducts.selectByVisibleText(var1);
         System.out.println("Features ");
-        System.out.println("GITTT ");
+        System.out.println("GITTT lab ");
 
+    }
+
+    @And("I verify that the error message with xpath {string} is displayed")
+    public void iVerifyThatTheErrorMessageWithXpathIsDisplayed(String xpathVar) {
+        getDriver().findElement(By.xpath("//input[@id='zip-code']/../small")).isDisplayed();
+        System.out.println("Error message");
     }
 }
 

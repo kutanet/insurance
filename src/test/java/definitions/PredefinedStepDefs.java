@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
@@ -55,6 +56,7 @@ public class PredefinedStepDefs {
     @Then("I wait for element with xpath {string} to be present")
     public void iWaitForElementWithXpathToBePresent(String xpath) {
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+
     }
 
     @Then("I wait for element with xpath {string} to not be present")
@@ -226,7 +228,13 @@ public class PredefinedStepDefs {
 
     @When("I Launch insurance page")
     public void iLaunchInsurancePage() {
-        getDriver().get("https://skryabin.com/market/quote.html");
+        MutableCapabilities capabilities = new MutableCapabilities();
+        HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
+        browserstackOptions.put("resolution", "2048x1536");
+// Set the selenium version to 4.0.0.
+        browserstackOptions.put("seleniumVersion", "4.0.0");
+        capabilities.setCapability("bstack:options", browserstackOptions);
+        getDriver().get("http://154.41.228.85/dashboard/");
     }
 
     @And("I fill out required fields with valid data")
@@ -239,7 +247,7 @@ public class PredefinedStepDefs {
     public void iChooseFromTheCountryList(String arg0) {
         WebElement countryList =getDriver().findElement(By.xpath("//select[@class=\"form-control\"]"));
         Select list=new Select(countryList);
-        list.selectByValue(arg0);
+        list.selectByValue(arg0.toLowerCase());
 
     }
 
