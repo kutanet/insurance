@@ -11,9 +11,9 @@ Feature: Smoke steps
 
     Then I type "91201" into element with xpath "//input[@id='zip-code']"
 
-    Then I type "BakerStreet" into element with xpath "//input[@id='street']"
+    Then I type "221b Baker street" into element with xpath "//input[@id='street']"
 
-    Then I type "hundrd" into element with xpath "//input[@id='suit-apt']"
+    Then I type "100" into element with xpath "//input[@id='suit-apt']"
 
     Then I type "London" into element with xpath "//input[@id='city']"
 
