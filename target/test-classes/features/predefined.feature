@@ -11,24 +11,24 @@ Feature: Smoke steps
 
     Then I type "91201" into element with xpath "//input[@id='zip-code']"
 
-    Then I type "221b Baker street" into element with xpath "//input[@id='street']"
-#    Then I wait for 1 sec
-    Then I type "100" into element with xpath "//input[@id='suit-apt']"
-#    Then I wait for 1 sec
+    Then I type "BakerStreet" into element with xpath "//input[@id='street']"
+
+    Then I type "hundrd" into element with xpath "//input[@id='suit-apt']"
+
     Then I type "London" into element with xpath "//input[@id='city']"
-#    Then I wait for 1 sec
+
     Then I type "California" into element with xpath "//input[@id='state']"
-#    Then I wait for 1 sec
+
     Then I type "N/A" into element with xpath "//textarea[@id='additional']"
-#    Then I wait for 1 sec
+
     Then I type "user" into element with xpath "//input[@id='username']"
-#    Then I wait for 1 sec
+
     Then I type "password!" into element with xpath "//input[@id='password']"
-#    Then I wait for 1 sec
+    Then I wait for 1 sec
     Then I type "password!" into element with xpath "//input[@id='retype_password']"
-#    Then I wait for 1 sec
+    Then I wait for 1 sec
     Then I type "sherlock@holmes.com" into element with xpath "//input[@id='email']"
-#    Then I wait for 1 sec
+    Then I wait for 1 sec
     Then I type "+44 2012 321234" into element with xpath "//input[@id='phone_number']"
 #    Then I wait for 1 sec
     Then I type "01/06/1854" into element with xpath "//input[@name='date']"

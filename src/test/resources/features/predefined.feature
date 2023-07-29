@@ -11,7 +11,7 @@ Feature: Smoke steps
 
     Then I type "91201" into element with xpath "//input[@id='zip-code']"
 
-    Then I type "221b Baker street" into element with xpath "//input[@id='street']"
+    Then I type "BakerStreet" into element with xpath "//input[@id='street']"
 
     Then I type "100" into element with xpath "//input[@id='suit-apt']"
 
@@ -44,6 +44,7 @@ Feature: Smoke steps
     Then I type "Dr Watson" into element with xpath "//input[@id='Name']"
     Then I switch to default content
     Then I click on element with xpath "//button[normalize-space()='Submit form']"
+    And I verify that no errors are displayed
     Then I wait for 5 sec
 
 
