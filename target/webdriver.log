@@ -523,3 +523,111 @@ java.net.SocketException: Connection reset
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
 	at java.lang.Thread.run(Thread.java:1623) [?:?]
+ERROR 19:11:28:689 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 19:11:28:697 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 19:11:28:780 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 19:49:29:274 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 19:49:29:280 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 19:49:29:372 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:02:50:811 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:02:50:818 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:02:50:906 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:04:28:307 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:04:28:315 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:04:28:417 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:14:50:131 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:14:50:138 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:14:50:218 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:24:12:352 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:24:12:358 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:24:12:444 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:24:53:208 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:24:53:214 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:24:53:333 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+WARN 20:25:03:345 handler.WebSocketHandler handleException:142 onError
+java.net.SocketException: Connection reset
+	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256) ~[netty-buffer-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at java.lang.Thread.run(Thread.java:1623) [?:?]
+ERROR 20:25:50:059 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:25:50:064 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:25:50:154 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:29:33:044 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:29:33:051 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:29:33:144 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:30:26:426 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:30:26:433 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:30:26:523 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:31:16:124 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:31:16:131 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:31:16:226 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:31:36:988 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:31:36:995 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:31:37:086 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:32:34:317 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:32:34:324 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:32:34:539 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:33:24:370 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:33:24:376 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:33:24:460 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+WARN 20:33:32:833 handler.WebSocketHandler handleException:142 onError
+java.net.SocketException: Connection reset
+	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256) ~[netty-buffer-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at java.lang.Thread.run(Thread.java:1623) [?:?]
+ERROR 20:33:48:127 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:33:48:133 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:33:48:214 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+WARN 20:33:56:664 handler.WebSocketHandler handleException:142 onError
+java.net.SocketException: Connection reset
+	at sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256) ~[netty-buffer-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.90.Final.jar:4.1.90.Final]
+	at java.lang.Thread.run(Thread.java:1623) [?:?]
+ERROR 20:35:37:725 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:35:37:732 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:35:37:810 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:36:51:437 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:36:51:442 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:36:51:533 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:37:40:131 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:37:40:137 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:37:40:309 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:40:46:086 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:40:46:093 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:40:46:176 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
+ERROR 20:41:15:569 online.HttpClient execute:176 Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+WARN 20:41:15:576 versions.VersionDetector getDriverVersionFromRepository:123 Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+INFO 20:41:15:662 wdm.WebDriverManager exportDriver:1291 Exporting webdriver.chrome.driver as /Users/kutanet/.cache/selenium/chromedriver/mac-arm64/114.0.5735.90/chromedriver
