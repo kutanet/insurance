@@ -5,7 +5,7 @@ Feature: Smoke steps
   Scenario: Insurance smoke test
     Given I open url "http://154.41.228.85"
     Then I wait for 1 sec
-    Then I type "Sherlock Holmes" into element with xpath "//input[@id='name']"
+    Then I type "Sherlock Holmes" into element with xpath "//input[@id='exampleInputEmail1']"
     Then I wait for 1 sec
     Then I choose "USA" from the country list
     Then I wait for 1 sec
@@ -22,7 +22,6 @@ Feature: Smoke steps
     Then I type "N/A" into element with xpath "//textarea[@id='add-info']"
     Then I wait for 1 sec
     Then I type "user" into element with xpath "//input[@id='user']"
-    Then I wait for 1 sec
     Then I type "password" into element with xpath "//input[@id='password']"
     Then I wait for 1 sec
     Then I type "password" into element with xpath "//input[@id='reenter-password']"
