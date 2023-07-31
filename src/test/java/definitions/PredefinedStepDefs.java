@@ -251,5 +251,25 @@ public class PredefinedStepDefs {
 
     }
 
+    @Then("I wait for element with {string} to be present")
+    public void iWaitForElementWithIdToBePresent(String id) {
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(By.id(id)));
+    }
+
+    @Then("I type {string} into element with id {string}")
+    public void iTypeIntoElementWithId(String text, String id) {
+        getDriver().findElement(By.id(id)).sendKeys(text);
+    }
+
+    @Then("I click on element with id {string}")
+    public void iClickOnElementWithId(String id) {
+        getDriver().findElement(By.id(id)).click();
+    }
+
+    @Then("I capture the alert message and make sure that it contains {string}")
+    public void iCaptureAlertMessage(String expectedMessage) {
+        String actualMessage = getDriver().switchTo().alert().getText();
+        assertThat(actualMessage).isEqualTo(expectedMessage);
+    }
 
 }

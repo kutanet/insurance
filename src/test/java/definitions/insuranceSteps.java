@@ -15,6 +15,8 @@ import java.io.File;
 import java.time.Duration;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
 
@@ -36,6 +38,14 @@ public class insuranceSteps {
     public void iVerifyThatTheErrorMessageWithXpathIsDisplayed(String xpathVar) {
         getDriver().findElement(By.xpath("//input[@id='zip-code']/../small")).isDisplayed();
         System.out.println("Error message");
+    }
+
+    @Then("I choose products from the products list:")
+    public void iChooseProductsFromTheProductsList(List<String> list) {
+        Select listOfProducts = new Select(getDriver().findElement(By.xpath("//select[@class='custom-select']")));
+        for (String value : list) {
+            listOfProducts.selectByValue(value);
+        }
     }
 }
 
