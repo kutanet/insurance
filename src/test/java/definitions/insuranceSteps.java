@@ -1,5 +1,4 @@
 package definitions;
-// Created by Viacheslav (Slava) Skryabin 04/01/2011
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -15,6 +14,8 @@ import java.io.File;
 import java.time.Duration;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
 
@@ -23,14 +24,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class insuranceSteps {
+
     @Then("I choose {string} from the products list")
     public void iChooseFromTheProductsList(String var1) {
         WebElement productList = getDriver().findElement(By.xpath("//select[@class='custom-select']"));
-        Select listOfProducts=new Select(productList);
+        Select listOfProducts = new Select(productList);
         listOfProducts.selectByVisibleText(var1);
         System.out.println("Features ");
         System.out.println("GITTT lab ");
-
     }
 
     @And("I verify that the error message with xpath {string} is displayed")
@@ -40,12 +41,16 @@ public class insuranceSteps {
     }
 
     @And("I verify that the error message with xpath {string} is not displayed")
-    // not working properly
-    public boolean iVerifyThatTheErrorMessageWithXpathIsNotDisplayed(String xpathVar)
-    {
-       return getDriver().findElements(By.xpath(xpathVar)).isEmpty();
-       //System.out.println("No error message");
+    public boolean iVerifyThatTheErrorMessageWithXpathIsNotDisplayed(String xpathVar) {
+        return getDriver().findElements(By.xpath(xpathVar)).isEmpty();
+        //System.out.println("No error message");
+    }
+
+    @Then("I choose products from the products list:")
+    public void iChooseProductsFromTheProductsList(List<String> list) {
+        Select listOfProducts = new Select(getDriver().findElement(By.xpath("//select[@class='custom-select']")));
+        for (String value : list) {
+            listOfProducts.selectByValue(value);
+        }
     }
 }
-
-
