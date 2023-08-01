@@ -20,6 +20,7 @@ import static support.TestContext.getDriver;
 
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class insuranceSteps {
     @Then("I choose {string} from the products list")
@@ -34,8 +35,17 @@ public class insuranceSteps {
 
     @And("I verify that the error message with xpath {string} is displayed")
     public void iVerifyThatTheErrorMessageWithXpathIsDisplayed(String xpathVar) {
-        getDriver().findElement(By.xpath("//input[@id='zip-code']/../small")).isDisplayed();
+        getDriver().findElement(By.xpath(xpathVar)).isDisplayed();
         System.out.println("Error message");
     }
+
+    @And("I verify that the error message with xpath {string} is not displayed")
+    // not working properly
+    public boolean iVerifyThatTheErrorMessageWithXpathIsNotDisplayed(String xpathVar)
+    {
+       return getDriver().findElements(By.xpath(xpathVar)).isEmpty();
+       //System.out.println("No error message");
+    }
 }
+
 
