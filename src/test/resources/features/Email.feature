@@ -12,6 +12,7 @@ Feature: Email field
  @insurance
  Scenario: Mandatory
    Given I Launch insurance page
+   Then I scroll down to "//button[normalize-space()='Submit form']"
    Then I click on element using JavaScript with xpath "//button[normalize-space()='Submit form']"
    And I accept alert
    And I wait for element with xpath "//small[normalize-space()='The email field is required.']" to be present
