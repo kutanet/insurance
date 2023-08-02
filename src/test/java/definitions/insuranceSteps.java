@@ -53,4 +53,14 @@ public class insuranceSteps {
             listOfProducts.selectByValue(value);
         }
     }
+
+
+    @Then("I scroll down to {string}")
+    public void iScrollDownTo(String arg0) throws InterruptedException {
+        WebElement element = getDriver().findElement(By.xpath(arg0));
+        JavascriptExecutor executor = (JavascriptExecutor) getDriver();
+        executor.executeScript("arguments[0].scrollIntoView(false);", element);
+        executor.executeScript("window.scrollBy(0, " + 1 + ");", element);
+        Thread.sleep(500);
+    }
 }
