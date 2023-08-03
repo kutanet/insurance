@@ -76,6 +76,7 @@ Feature: Name field
       |<name               |
       |>name               |
       |?name               |
+    |/name               |
 
   @insurance
   Scenario: Mandatory field
