@@ -41,9 +41,14 @@ public class insuranceSteps {
     }
 
     @And("I verify that the error message with xpath {string} is not displayed")
-    public boolean iVerifyThatTheErrorMessageWithXpathIsNotDisplayed(String xpathVar) {
-        return getDriver().findElements(By.xpath(xpathVar)).isEmpty();
-        //System.out.println("No error message");
+    public void iVerifyThatTheErrorMessageWithXpathIsNotDisplayed(String xpathVar)
+    {
+        // The 1st variant
+        boolean result = getDriver().findElements(By.xpath(xpathVar)).isEmpty();
+        assertThat(result).isTrue();
+        // The 2nd variant
+        //List<WebElement> result = getDriver().findElements(By.xpath(xpathVar));
+        //assertThat(result.size()).isEqualTo(0);
     }
 
     @Then("I choose products from the products list:")
