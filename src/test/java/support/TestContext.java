@@ -2,10 +2,7 @@
 package support;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,15 +15,35 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class TestContext {
-
     private static WebDriver driver;
+
+
+//    New methods-------------
+    public static void  jsClick(String xpath){
+        WebElement element=getDriver().findElement(By.xpath(xpath));
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();",element);
+    }
+    public static void  jsClick(WebElement element){
+        JavascriptExecutor js=(JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();",element);
+    }
+    public static WebDriverWait getWait(){
+        return new WebDriverWait(driver, Duration.ofSeconds(5));
+    }
+
+
+//    -----------------End of new methods----------
 
     public static WebDriver getDriver() {
         return driver;

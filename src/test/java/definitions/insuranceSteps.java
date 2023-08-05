@@ -1,5 +1,6 @@
 package definitions;
 
+import Pages.MainPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -67,5 +68,23 @@ public class insuranceSteps {
         executor.executeScript("arguments[0].scrollIntoView(false);", element);
         executor.executeScript("window.scrollBy(0, " + 1 + ");", element);
         Thread.sleep(500);
+    }
+
+    @Then("I fill out the name field with {string}")
+    public void iFillOutTheNameFieldWith(String nameVariable) {
+        MainPage page=new MainPage();
+        page.fillName(nameVariable);
+    }
+
+    @Then("I fill out the zip code field with {string}")
+    public void iFillOutTheZipCodeFieldWith(String zipVariable) {
+        MainPage page=new MainPage();
+        page.fillZipCodeField(zipVariable);
+    }
+
+    @Then("I choose USA from the country list")
+    public void iChooseUSAFromTheCountryList() {
+        MainPage page1=new MainPage();
+        page1.chooseUSA();
     }
 }
