@@ -3,12 +3,14 @@ Feature:Smoke steps
 
   @insurance1
 Scenario:Insurance Street1(happy path)
-Scenario:Insurance Street1
+#Scenario:Insurance Street1
 Given I open url "http://154.41.228.85/"
 Then I type "12345 Saratoga- Cupertino avenue" into element with xpath "//input[@id='street']"
 Then I wait for 1 sec
 Then I click on element with xpath "//input[@id='state']"
 Then I wait for 5 sec
+# add verification
+
 
   @Insurance1
   Scenario: Insurance Street2(51characters)
@@ -27,6 +29,7 @@ Then I wait for 5 sec
     Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='zip-code']"
     Then I wait for 5 sec
+    #add verification No error message
 
   @Insurance2
   Scenario: Insurance Street4(-special character)
@@ -35,14 +38,16 @@ Then I wait for 5 sec
     Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='zip-code']"
     Then I wait for 5 sec
+    #add verification  error message displayed
 
   @Insurance2
-  Scenario: Insurance Street5
+  Scenario: Insurance Street 3 characters
     Given I open url "http://154.41.228.85/"
     Then I type "12A" into element with xpath "//input[@id='street']"
     Then I wait for 2 sec
     Then I click on element with xpath "//input[@id='zip-code']"
     Then I wait for 5 sec
+    #add verification  error message displayed
 
 
 

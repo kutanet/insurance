@@ -55,6 +55,7 @@ public class PredefinedStepDefs {
 
     @Then("I wait for element with xpath {string} to be present")
     public void iWaitForElementWithXpathToBePresent(String xpath) {
+//    We take string variable xpath and send it to webdriver to find
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
 
     }

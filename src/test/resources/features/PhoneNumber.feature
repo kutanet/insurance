@@ -4,6 +4,7 @@ Feature: Smoke
   Scenario: Phone number feature
     Given I Launch insurance page
     And I wait for 1 sec
-    When I click on element with xpath "//input[@id='phone_number']"
+#    When I click on element with xpath "//input[@id='phone_number']"
     Then I type "123-1234123" into element with xpath "//input[@id='phone_number']"
+#   Add verification step
     And I wait for 1 sec
