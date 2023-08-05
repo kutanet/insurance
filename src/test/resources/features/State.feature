@@ -14,7 +14,8 @@ Feature: Smoke steps
     And I type "California" into element with xpath "//input[@id='state']"
     And I wait for 1 sec
 #    And I verify that the error message with xpath //small[contains(text(),'The state field is required.')] is not displayed
-    Then I fill out required fields with valid data
+#    Then I fill out required fields with valid data
+    Then I verify that the error message with xpath "//small[contains(text(),'The state field is required.')]" is not displayed
 #   Add verification
 
   Scenario: Insurance Smoke State Negative_3Characters
