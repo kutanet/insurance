@@ -3,12 +3,17 @@ Feature: Smoke steps
 
   @predefined1
   Scenario: Insurance smoke test
-    Given I open url "http://154.41.228.85"
-    Then I type "Sherlock Holmes" into element with xpath "//input[@id='name']"
-    Then I choose "USA" from the country list
-    Then I type "91201" into element with xpath "//input[@id='zip-code']"
+    Given I Launch insurance page
+
+    Then I fill out the name field with "Sherlock Holmes"
+
+    Then I choose USA from the country list
+
+    Then I fill out the zip code field with "43123"
+
     Then I type "Bakerstreet" into element with xpath "//input[@id='street']"
-    Then I type "hundrd" into element with xpath "//input[@id='suit-apt']"
+
+    Then I type "100" into element with xpath "//input[@id='suit-apt']"
     Then I type "London" into element with xpath "//input[@id='city']"
     Then I type "California" into element with xpath "//input[@id='state']"
     Then I type "N/A" into element with xpath "//textarea[@id='additional']"
@@ -25,7 +30,10 @@ Feature: Smoke steps
     Then I choose "AUTO" from the products list
     Then I switch to iframe with xpath "//iframe[@src='http://154.41.228.85/iframe']"
     Then I type "Dr Watson" into element with xpath "//input[@id='Name']"
+    Then I type "+44 2012 121232" into element with xpath "//input[@id='Phone']"
+
     Then I switch to default content
+    And I wait for 5 sec
     Then I click on element with xpath "//button[normalize-space()='Submit form']"
     Then I wait for 15 sec
 
