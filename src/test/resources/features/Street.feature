@@ -1,53 +1,49 @@
-@predifined
+@Insurance
 Feature:Smoke steps
 
   @insurance1
 Scenario:Insurance Street1(happy path)
-#Scenario:Insurance Street1
-Given I open url "http://154.41.228.85/"
+Given I Launch insurance page
 Then I type "12345 Saratoga- Cupertino avenue" into element with xpath "//input[@id='street']"
-Then I wait for 1 sec
 Then I click on element with xpath "//input[@id='state']"
-Then I wait for 5 sec
-# add verification
-
+And I verify that the error message with xpath "//input[@id='street']/../small" is not displayed
+And I wait for 1 sec
 
   @Insurance1
   Scenario: Insurance Street2(51characters)
-    Given I open url "http://154.41.228.85/"
-    Then I type "123456789123 Main Saratoga-Cupertino 1234567 Street'" into element with xpath "//input[@id='street']"
+    Given I Launch insurance page
+    Then I type "ssttrreettssttrreettssttrreettssttrreettssttrreettt'" into element with xpath "//input[@id='street']"
     Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='zip-code']"
-    Then I wait for element with xpath "//div[@class='card application']//div[5]//div[1]//small[1]" to be present
-    And I verify that the error message with xpath "//div[@class='card application']//div[5]//div[1]//small[1]'" is displayed
-    Then I wait for 5 sec
+    Then I verify that the error message with xpath {string} is displayed
 
   @Insurance2
   Scenario: Insurance Street3(50 characters)
-    Given I open url "http://154.41.228.85/"
+    Given I Launch insurance page
     Then I type "11111111111 Main Saratoga-Cupertino 1234567 Street'" into element with xpath "//input[@id='street']"
     Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='zip-code']"
     Then I wait for 5 sec
-    #add verification No error message
+    Then I verify that the error message with xpath {string} is not displayed
 
   @Insurance2
-  Scenario: Insurance Street4(-special character)
-    Given I open url "http://154.41.228.85/"
-    Then I type "Saratoga-Cupertino" into element with xpath "//input[@id='street']"
+  Scenario: Insurance Street4(special character "@" Negative)
+    Given I Launch insurance page
+    Then I type "Saratoga@Cupertino" into element with xpath "//input[@id='street']"
     Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='zip-code']"
-    Then I wait for 5 sec
-    #add verification  error message displayed
+    And I wait for 1 sec
+    Then I verify that the error message with xpath "//input[@id='street']/../small" is displayed
+    And I wait for 1 sec
 
   @Insurance2
   Scenario: Insurance Street 3 characters
-    Given I open url "http://154.41.228.85/"
+    Given I Launch insurance page
     Then I type "12A" into element with xpath "//input[@id='street']"
     Then I wait for 2 sec
     Then I click on element with xpath "//input[@id='zip-code']"
     Then I wait for 5 sec
-    #add verification  error message displayed
+    And I verify that the error message with xpath "//input[@id='street']/../small" is displayed
 
 
 
