@@ -1,28 +1,18 @@
 package definitions;
 
+import Pages.ConfirmationPage;
 import Pages.MainPage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.io.File;
-import java.time.Duration;
-import java.util.Date;
-import java.util.Iterator;
+
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
 
-import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 public class insuranceSteps {
 
@@ -86,5 +76,121 @@ public class insuranceSteps {
     public void iChooseUSAFromTheCountryList() {
         MainPage page1=new MainPage();
         page1.chooseUSA();
+    }
+
+    @Then("I fill out the street field with {string}")
+    public void iFillOutTheStreetFieldWith(String street) {
+        new MainPage().fillStreetField(street);
+    }
+
+    @Then("I fill out the city field with {string}")
+    public void iFillOutTheCityFieldWith(String city) {
+        new MainPage().fillCityField(city);
+    }
+
+    @Then("I fill out the apartment field with {string}")
+    public void iFillOutTheApartmentFieldWith(String apt) {
+        new MainPage().fillAptField(apt);
+    }
+
+    @Then("I fill out the state field with {string}")
+    public void iFillOutTheStateFieldWith(String state) {
+        new MainPage().fillStateField(state);
+    }
+
+    @Then("I fill out the additional info field with {string}")
+    public void iFillOutTheAdditionalInfoFieldWith(String info) {
+        new MainPage().fillAdditionalInfoField(info);
+    }
+
+    @Then("I fill out the username field with {string}")
+    public void iFillOutTheUsernameFieldWith(String username) {
+        new MainPage().fillUsernameField(username);
+    }
+
+
+    @Then("I fill out the password field with {string}")
+    public void iFillOutThePasswordFieldWith(String password) {
+        new MainPage().fillPasswordField(password);
+    }
+
+    @Then("I fill out the reenter password field with {string}")
+    public void iFillOutTheReenterPasswordFieldWith(String password) {
+        new MainPage().fillReEnterPasswordField(password);
+    }
+
+    @Then("I fill out the email field with {string}")
+    public void iFillOutTheEmailFieldWith(String email) {
+        new MainPage().fillEmailField(email);
+    }
+
+    @Then("I fill out the phone number field with {string}")
+    public void iFillOutThePhoneNumberFieldWith(String phoneNumber) {
+        new MainPage().fillPhoneNumberField(phoneNumber);
+    }
+
+    @Then("I fill out the birthday field with {string}")
+    public void iFillOutTheBirthdayFieldWith(String birthday) {
+        new MainPage().fillDateOfBirthField(birthday);
+    }
+
+    @Then("I choose male gender")
+    public void iChooseMaleGender() {
+        new MainPage().chooseMaleGender();
+    }
+
+    @Then("I choose user products from the products list")
+    public void iChooseUserProductsFromTheProductsList() {
+        List<String> products = List.of("auto", "life", "health");
+        new MainPage().chooseProductsFromList(products);
+    }
+
+    @Then("I switch to emergency contact iframe")
+    public void iSwitchToEmergencyContactIframe() {
+        new MainPage().switchToIframe();
+    }
+
+    @Then("I fill out the emergency contact name field with {string}")
+    public void iFillOutTheEmergencyContactNameFieldWith(String name) {
+        new MainPage().fillEmergencyContactNameField(name);
+    }
+
+    @Then("I fill out the emergency contact phone number field with {string}")
+    public void iFillOutTheEmergencyContactPhoneNumberFieldWith(String phone) {
+        new MainPage().fillEmergencyPhoneField(phone);
+    }
+
+    @Then("I submit form")
+    public void iSubmitForm() {
+        new MainPage().submitForm();
+    }
+
+    @Then("I accept agreement")
+    public void iAcceptAgreement() {
+        new MainPage().acceptAgreement();
+    }
+
+    @Then("I verify that the name in the confirmation page is {string}")
+    public void iVerifyThatTheNameInTheConfirmationPageIs(String name) {
+        String actualName = new ConfirmationPage().getActualName();
+        assertThat(actualName).isEqualTo(name);
+    }
+
+    @And("I verify that the address in the confirmation page is {string}")
+    public void iVerifyThatTheAddressInTheConfirmationPageIs(String address) {
+        String actualAddress = new ConfirmationPage().getActualAddress();
+        assertThat(actualAddress).isEqualTo(address);
+    }
+
+    @And("I verify that the username in the confirmation page is {string}")
+    public void iVerifyThatTheUsernameInTheConfirmationPageIs(String username) {
+        String actualUsername = new ConfirmationPage().getActualUsername();
+        assertThat(actualUsername).isEqualTo(username);
+    }
+
+    @And("I verify that the email in the confirmation page is {string}")
+    public void iVerifyThatTheEmailInTheConfirmationPageIs(String email) {
+        String actualEmail = new ConfirmationPage().getActualEmail();
+        assertThat(actualEmail).isEqualTo(email);
     }
 }
