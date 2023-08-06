@@ -27,3 +27,34 @@ Feature: Smoke steps
     Then I switch to default content
     Then I click on element with xpath "//button[contains(text(), 'Submit form')]"
     Then I capture the alert message and make sure that it contains "Please accept agreement"
+
+
+  Scenario: Verify user's information on the confirmation page
+    Given I Launch insurance page
+    Then I wait for element with "name" to be present
+    Then I fill out the name field with "Joe Biden"
+    Then I choose USA from the country list
+    Then I fill out the zip code field with "20500"
+    Then I fill out the street field with "1600 Pennsylvania Avenue, N.W."
+    Then I fill out the apartment field with "100"
+    Then I fill out the city field with "Washington"
+    Then I fill out the state field with "District of Columbia"
+    Then I fill out the additional info field with "n/a"
+    Then I fill out the username field with "joeBiden"
+    Then I fill out the password field with "password123#"
+    Then I fill out the reenter password field with "password123#"
+    Then I fill out the email field with "jbiden@email.com"
+    Then I fill out the phone number field with "2024561111"
+    Then I fill out the birthday field with "11/20/1942"
+    Then I choose male gender
+    Then I accept agreement
+    Then I choose user products from the products list
+    Then I switch to emergency contact iframe
+    Then I fill out the emergency contact name field with "Jill Biden"
+    Then I fill out the emergency contact phone number field with "+12024561414"
+    Then I switch to default content
+    Then I submit form
+    Then I verify that the name in the confirmation page is "Joe Biden"
+    And I verify that the address in the confirmation page is "Washington usa"
+    And I verify that the username in the confirmation page is "joeBiden"
+    And I verify that the email in the confirmation page is "jbiden@email.com"

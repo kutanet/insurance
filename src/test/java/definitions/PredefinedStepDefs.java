@@ -16,7 +16,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.time.Duration;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Iterator;
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
