@@ -1,13 +1,13 @@
 @Insurance
 Feature:Smoke steps
 
-  @insurance
-Scenario:Insurance Street1(happy path)
-Given I Launch insurance page
-Then I type "12345 Saratoga- Cupertino avenue" into element with xpath "//input[@id='street']"
-Then I click on element with xpath "//input[@id='state']"
-And I verify that the error message with xpath "//small[contains(text(),'Please use only latin letters, numbers or special ')]" is not displayed
-And I wait for 1 sec
+  @Insurance
+  Scenario:Insurance Street1(happy path)
+    Given I Launch insurance page
+    Then I type "12345 Saratoga- Cupertino avenue" into element with xpath "//input[@id='street']"
+    Then I click on element with xpath "//input[@id='state']"
+    And I verify that the error message with xpath "//small[contains(text(),'Please use only latin letters, numbers or special ')]" is not displayed
+    And I wait for 1 sec
 
   @Insurance
   Scenario: Insurance Street2(51characters)
@@ -15,7 +15,7 @@ And I wait for 1 sec
     Then I type "ssttrreettssttrreettssttrreettssttrreettssttrreettt'" into element with xpath "//input[@id='street']"
     Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='zip-code']"
-    Then I verify that the error message with xpath {string} is displayed
+    #add verification
 
   @Insurance
   Scenario: Insurance Street3(50 characters Positive)
@@ -24,7 +24,7 @@ And I wait for 1 sec
     Then I wait for 1 sec
     Then I click on element with xpath "//input[@id='zip-code']"
     Then I wait for 1 sec
-    Then I verify that the error message with xpath {string} is not displayed
+   #add verification
   @Insurance
   Scenario: Insurance Street4(special character "@" Negative)
     Given I Launch insurance page
