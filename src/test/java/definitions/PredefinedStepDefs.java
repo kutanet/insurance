@@ -1,6 +1,8 @@
 // Created by Viacheslav (Slava) Skryabin 04/01/2011
 package definitions;
 
+import Pages.MainPage;
+import Pages.Page;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,7 +16,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.time.Duration;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Iterator;
 import static org.assertj.core.api.Assertions.*;
 import static support.TestContext.getDriver;
@@ -229,13 +230,16 @@ public class PredefinedStepDefs {
 
     @When("I Launch insurance page")
     public void iLaunchInsurancePage() {
-        MutableCapabilities capabilities = new MutableCapabilities();
-        HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
-        browserstackOptions.put("resolution", "2048x1536");
-// Set the selenium version to 4.0.0.
-        browserstackOptions.put("seleniumVersion", "4.0.0");
-        capabilities.setCapability("bstack:options", browserstackOptions);
-        getDriver().get("http://154.41.228.85/dashboard/");
+        MainPage mainPage = new MainPage(); // Create an instance of MainPage
+        Page.open(); // Call the open() method on the instance
+
+//        MutableCapabilities capabilities = new MutableCapabilities();
+//        HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
+//        browserstackOptions.put("resolution", "2048x1536");
+//// Set the selenium version to 4.0.0.
+//        browserstackOptions.put("seleniumVersion", "4.0.0");
+//        capabilities.setCapability("bstack:options", browserstackOptions);
+//        getDriver().get("http://154.41.228.85/dashboard/");
     }
 
     @And("I fill out required fields with valid data")
