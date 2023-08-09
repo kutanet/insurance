@@ -204,6 +204,8 @@ public class MainPage extends Page {
 
         passwordField.sendKeys("Password1!");
         reEnterPasswordField.sendKeys("Password1!");
+        //fillsPasswordField
+
 
 
     }
