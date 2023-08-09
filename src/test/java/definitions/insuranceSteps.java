@@ -193,4 +193,20 @@ public class insuranceSteps {
         String actualEmail = new ConfirmationPage().getActualEmail();
         assertThat(actualEmail).isEqualTo(email);
     }
+
+    @Then("I fill out the password field with various outlines")
+    public void iFillOutThePasswordFieldWithVariousOutlines() throws InterruptedException
+    {
+        new MainPage().fillOutPasswordField();
+        Thread.sleep(5000);
+    }
+
+    @And("I verify that the review page is open")
+    public String iVerifyThatTheReviewPageIsOpen() throws InterruptedException
+    {
+
+        return getDriver().getTitle();
+
+    }
+
 }

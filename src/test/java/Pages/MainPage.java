@@ -199,6 +199,17 @@ public class MainPage extends Page {
         submitButton.click();
     }
 
+
+    public void fillOutPasswordField(){
+
+        passwordField.sendKeys("Password1!");
+        reEnterPasswordField.sendKeys("Password1!");
+
+
+    }
+
+
+
 }
 
 
