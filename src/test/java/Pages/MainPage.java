@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
 import java.util.List;
 
 import static support.TestContext.getDriver;
@@ -195,8 +196,14 @@ public class MainPage extends Page {
         emergencyPhoneField.sendKeys(phone);
     }
 
-    public void submitForm() {
+    public void submitForm() { submitButton.click(); }
+
+    public void fillOutStateFieldWithInvalidData() throws InterruptedException {
+        stateField.sendKeys( "California1");
+        acceptAgreement();
+        Thread.sleep(5000);
         submitButton.click();
+
     }
 
 }

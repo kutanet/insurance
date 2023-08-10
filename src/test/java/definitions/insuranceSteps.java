@@ -193,4 +193,9 @@ public class insuranceSteps {
         String actualEmail = new ConfirmationPage().getActualEmail();
         assertThat(actualEmail).isEqualTo(email);
     }
+
+    @Then("I fill out state field with invalid data")
+    public void iFillOutStateFieldWithInvalidData() throws InterruptedException {
+        new MainPage().fillOutStateFieldWithInvalidData();
+    }
 }

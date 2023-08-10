@@ -40,3 +40,9 @@ Feature: Smoke steps
     And I wait for 2 sec
     Then I verify that the error message with xpath "//small[contains(text(),'The state must not be greater than 32 characters.')]" is displayed
     And I wait for 2 sec
+
+
+  Scenario: Insurance Smoke State Negative
+    Given I Launch insurance page
+    Then I fill out state field with invalid data
+    And I wait for 5 sec

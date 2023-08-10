@@ -33,7 +33,7 @@ public class PredefinedStepDefs {
 
     @Then("I wait for {int} sec")
     public void iWaitForSec(int sec) throws Exception {
-        Thread.sleep(sec * 1000);
+        Thread.sleep(sec * 5000);
     }
 
     @When("I maximize window")
