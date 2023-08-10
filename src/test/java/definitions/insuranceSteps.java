@@ -195,6 +195,23 @@ public class insuranceSteps {
         assertThat(actualEmail).isEqualTo(email);
     }
 
+passwordFieldObjectOrientedMethodTesting
+    @Then("I fill out the password field with various outlines")
+    public void iFillOutThePasswordFieldWithVariousOutlines() throws InterruptedException
+    {
+        new MainPage().fillOutPasswordField();
+        Thread.sleep(5000);
+    }
+
+    @And("I verify that the review page is open")
+    public String iVerifyThatTheReviewPageIsOpen() throws InterruptedException
+    {
+
+        return getDriver().getTitle();
+        //titleVerification
+
+    }
+
 
     @Then("I fill out all the fields with valid data")
     public void iFillOutAllTheFieldsWithValidData() throws InterruptedException {
@@ -218,4 +235,5 @@ public class insuranceSteps {
 //        Assertions.assertThat(page.EmailMessageFormat().isDisplayed()).isFalse();
 
     }
+ main
 }
