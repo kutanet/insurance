@@ -195,6 +195,7 @@ public class insuranceSteps {
         assertThat(actualEmail).isEqualTo(email);
     }
 
+
     @Then("I fill out all the fields with valid data")
     public void iFillOutAllTheFieldsWithValidData() throws InterruptedException {
         new MainPage().fillOutAllTheFieldsWithValidData();
@@ -215,5 +216,6 @@ public class insuranceSteps {
     public void iVerifyThatEmailFormatErrorMessageIsNotDisplayed() {
 //        MainPage page =new MainPage();
 //        Assertions.assertThat(page.EmailMessageFormat().isDisplayed()).isFalse();
+
     }
 }

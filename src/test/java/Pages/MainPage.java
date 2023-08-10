@@ -203,8 +203,14 @@ public class MainPage extends Page {
         emergencyPhoneField.sendKeys(phone);
     }
 
-    public void submitForm() {
+    public void submitForm() { submitButton.click(); }
+
+    public void fillOutStateFieldWithInvalidData() throws InterruptedException {
+        stateField.sendKeys( "California1");
+        acceptAgreement();
+        Thread.sleep(5000);
         submitButton.click();
+
     }
 
     public void fillOutAllTheFieldsWithValidData() throws InterruptedException {
