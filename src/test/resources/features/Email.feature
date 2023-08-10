@@ -4,15 +4,16 @@ Feature: Email field
   @insurance
   Scenario: Happy path
     Then I Launch insurance page
-    Then I wait for element with "name" to be present
+    Then I wait for email field to be present
     And I fill out the email field with "example@mail.com"
     And I wait for 2 sec
     And I verify that the error message with xpath "//small[normalize-space()='The email format is invalid.']" is not displayed
+#    And I verify that email format error message is not displayed
 
   @insurance
   Scenario: Mandatory
     Given I Launch insurance page
-    Then I wait for element with "name" to be present
+    Then I wait for email field to be present
     Then I accept agreement
     And I wait for 2 sec
     And I verify that the error message with xpath "//small[normalize-space()='The email field is required.']" is displayed
@@ -20,7 +21,7 @@ Feature: Email field
   @insurance
   Scenario Outline: Some Negative
     Given I Launch insurance page
-    Then I wait for element with "name" to be present
+    Then I wait for email field to be present
     #Then I wait for 2 sec
     And I fill out the email field with "<email>"
     And I wait for element with xpath "//small[normalize-space()='The email format is invalid.']" to be present
