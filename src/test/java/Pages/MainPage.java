@@ -1,12 +1,17 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.stream.Stream;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static support.TestContext.getDriver;
 
 public class MainPage extends Page {
@@ -63,6 +68,8 @@ public class MainPage extends Page {
     private WebElement emergencyNameField;
     @FindBy(id = "Phone")
     private WebElement emergencyPhoneField;
+   @FindBy(xpath = "\"//small[normalize-space()='The email format is invalid.']\"")
+    private WebElement emailFormatErrorMessage;
 
 
 
@@ -205,6 +212,40 @@ public class MainPage extends Page {
         submitButton.click();
 
     }
+
+    public void fillOutAllTheFieldsWithValidData() throws InterruptedException {
+        nameField.sendKeys("Sherlock Holmes");
+        chooseUSA();
+        zipCodeField.sendKeys("92100");
+        streetField.sendKeys("223B Baker Street");
+        suiteField.sendKeys("100");
+        cityField.sendKeys("London");
+        stateField.sendKeys("LondonDC");
+        usernameField.sendKeys("user");
+        passwordField.sendKeys("pass!");
+        reEnterPasswordField.sendKeys("pass!");
+        emailField.sendKeys("mail@mail.com");
+        phoneNumberField.sendKeys("+442012431234");
+        dateOfBirthField.sendKeys("06/01/1982");
+        chooseMaleGender();
+        List<String> counries = Stream.of("auto", "home", "life").toList();
+        chooseProductsFromList(counries);
+        acceptAgreement();
+        Thread.sleep(5000);
+        submitButton.click();
+
+
+    }
+
+    public void waitForEmailField(){
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='email']")));
+
+    }
+//    public boolean  emailMessageFormat(){
+//
+//        return assertThat(emailFormatErrorMessage.isDisplayed()).isFalse();
+//
+//    }
 
 }
 

@@ -79,3 +79,26 @@ Feature: Suite/Apt feature
     Then I click on element with xpath "//button[contains(text(), 'Submit form')]"
     Then I verify that the error message with xpath "//div[6]//div[1]//small[1]" is not displayed
     And I wait for 4 sec
+
+    @insurance
+    Scenario Outline: Suite/Apt feature outline
+      Given I open url "http://154.41.228.85/"
+      Then I type "<street>" into element with xpath "//input[@id='street']"
+      Then I type "<suite-apt>" into element with xpath "//input[@id='suit-apt']"
+      Then I type "<city>" into element with xpath "//input[@id='city']"
+      Then I type "<state>" into element with xpath "//input[@id='state']"
+      And I wait for 4 sec
+      Then I click on element with xpath "//input[@id='agreement']"
+      Then I click on element with xpath "//button[contains(text(), 'Submit form')]"
+      And I accept alert
+      Then I verify that the error message with xpath "//div[6]//div[1]//small[1]" is not displayed
+      And I wait for 4 sec
+
+      @insurance @insurance
+      Examples:
+      | street           | suite-apt | city          | state         |
+      | Baker Street     | 221-B     | London        | N/A           |
+      | Conch Street     | 124       | Bikini Bottom | Pacific Ocean |
+      | Ocean Drive      | 123456      | Miami       | Florida     |
+
+

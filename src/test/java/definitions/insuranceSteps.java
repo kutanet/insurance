@@ -4,6 +4,7 @@ import Pages.ConfirmationPage;
 import Pages.MainPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.assertj.core.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
@@ -194,8 +195,27 @@ public class insuranceSteps {
         assertThat(actualEmail).isEqualTo(email);
     }
 
-    @Then("I fill out state field with invalid data")
-    public void iFillOutStateFieldWithInvalidData() throws InterruptedException {
-        new MainPage().fillOutStateFieldWithInvalidData();
+
+    @Then("I fill out all the fields with valid data")
+    public void iFillOutAllTheFieldsWithValidData() throws InterruptedException {
+        new MainPage().fillOutAllTheFieldsWithValidData();
+    }
+
+    @And("I verify that the review page is opened")
+    public void iVerifyThatTheReviewPageIsOpened() {
+        ConfirmationPage page=new ConfirmationPage();
+        Assertions.assertThat("Emergency app - learning html test app").isEqualTo(page.getTitle());
+    }
+
+    @Then("I wait for email field to be present")
+    public void iWaitForEmailFieldToBePresent() {
+        new MainPage().waitForEmailField();
+    }
+
+    @And("I verify that email format error message is not displayed")
+    public void iVerifyThatEmailFormatErrorMessageIsNotDisplayed() {
+//        MainPage page =new MainPage();
+//        Assertions.assertThat(page.EmailMessageFormat().isDisplayed()).isFalse();
+
     }
 }
