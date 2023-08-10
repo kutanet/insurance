@@ -34,4 +34,7 @@ public class Page {
     public void waitingToBeClickable(WebElement element){
         getWait().until(ExpectedConditions.elementToBeClickable(element));
     }
+    public String getTitle() {
+        return getDriver().getTitle(); // Retrieve and return the title of the current web page
+    }
 }
