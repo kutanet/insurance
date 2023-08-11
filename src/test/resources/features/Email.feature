@@ -6,9 +6,19 @@ Feature: Email field
     Then I Launch insurance page
     Then I wait for email field to be present
     And I fill out the email field with "example@mail.com"
-    And I wait for 2 sec
-    And I verify that the error message with xpath "//small[normalize-space()='The email format is invalid.']" is not displayed
-#    And I verify that email format error message is not displayed
+    And I choose male gender
+    And I wait for 1 sec
+    And I verify that email format error message is not displayed
+    And I wait for 1 sec
+  @insurance
+  Scenario: Invalid email
+    Then I Launch insurance page
+    Then I wait for email field to be present
+    And I fill out the email field with "examplemail.com"
+    And I choose male gender
+    And I wait for 1 sec
+    And I verify that email format error message is displayed
+    And I wait for 1 sec
 
   @insurance
   Scenario: Mandatory

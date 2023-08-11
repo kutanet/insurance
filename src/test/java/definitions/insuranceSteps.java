@@ -9,8 +9,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
+import java.util.Map;
 
 import static org.assertj.core.api.Assertions.*;
+import static support.TestContext.getDataFromYMLFile;
 import static support.TestContext.getDriver;
 
 import org.openqa.selenium.WebElement;
@@ -231,8 +233,26 @@ public class insuranceSteps {
 
     @And("I verify that email format error message is not displayed")
     public void iVerifyThatEmailFormatErrorMessageIsNotDisplayed() {
-//        MainPage page =new MainPage();
-//        Assertions.assertThat(page.EmailMessageFormat().isDisplayed()).isFalse();
+        MainPage page =new MainPage();
+        assertThat(page.isEmailFormatMessagePresents()).isFalse();
 
+
+    }
+
+    @Then("I fill out all required fields from {string} file")
+    public void iFillOutAllRequiredFieldsFromFile(String fileName) {
+        Map<String,String> user =getDataFromYMLFile(fileName);
+        MainPage page = new MainPage();
+        page.fillName(user.get("name"));
+        page.chooseCountry(user.get("country"));
+        page.fillZipCodeField(user.get("zipcode"));
+
+
+    }
+
+    @And("I verify that email format error message is displayed")
+    public void iVerifyThatEmailFormatErrorMessageIsDisplayed() {
+        MainPage page =new MainPage();
+        assertThat(page.isEmailFormatMessagePresents()).isTrue();
     }
 }

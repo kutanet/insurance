@@ -16,7 +16,12 @@ import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.yaml.snakeyaml.Yaml;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
@@ -40,6 +45,20 @@ public class TestContext {
     }
     public static WebDriverWait getWait(){
         return new WebDriverWait(driver, Duration.ofSeconds(5));
+    }
+
+    public static Map<String,String> getDataFromYMLFile(String fileName)  {
+        try {
+            String filePath = System.getProperty("user.dir") + "/src/test/resources/data/" + fileName + ".yml";
+            File file = new File(filePath);
+            InputStream stream = new FileInputStream(file);
+            Yaml yaml = new Yaml();
+            return yaml.load(stream);
+        } catch (FileNotFoundException e){
+            System.out.println("File '"+fileName+".yml' not found!");
+            e.printStackTrace();
+            return null;
+        }
     }
 
 

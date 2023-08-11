@@ -68,7 +68,7 @@ public class MainPage extends Page {
     private WebElement emergencyNameField;
     @FindBy(id = "Phone")
     private WebElement emergencyPhoneField;
-   @FindBy(xpath = "\"//small[normalize-space()='The email format is invalid.']\"")
+   @FindBy(xpath = "//small[normalize-space()='The email must be a valid email address.']")
     private WebElement emailFormatErrorMessage;
 
 
@@ -253,8 +253,16 @@ public class MainPage extends Page {
         passwordField.sendKeys("Password1!");
         reEnterPasswordField.sendKeys("Password1!");
         //fillsPasswordField
+    }
 
+    public boolean isEmailFormatMessagePresents(){
 
+       return isElementPresent(emailFormatErrorMessage);
+    }
+    public void chooseCountry(String country){
+//        countrySelection.click();
+        Select list=new Select(countrySelection);
+        list.selectByValue(country.toLowerCase());
 
     }
 

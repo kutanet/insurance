@@ -1,5 +1,5 @@
 #Valid user data
-ame: Sherlock Holmes
+name: Sherlock Holmes
 country: USA
 zipcode: 91200
 street: 223B Baker Street
@@ -11,8 +11,6 @@ email: sherlock@mail.com
 phoneNumber: "+1 818 4800516"
 dateOfBirth: 01/06/1856
 gender: male
-products:
-    -auto
-    -home
+products: auto
 emergencyContactName: Dr. John H. Watson
 emergencyContactPHONE: +1 818 234 2334  
