@@ -1,9 +1,14 @@
 package Pages;
 
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static support.TestContext.*;
 
@@ -36,5 +41,15 @@ public class Page {
     }
     public String getTitle() {
         return getDriver().getTitle(); // Retrieve and return the title of the current web page
+    }
+
+    public boolean isElementPresent(WebElement element) {
+        try {
+            WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(2)); // Adjust timeout if needed
+            wait.until(ExpectedConditions.visibilityOf(element));
+            return true; // Element is present
+        } catch (NoSuchElementException | TimeoutException e) {
+            return false; // Element is not present
+        }
     }
 }
