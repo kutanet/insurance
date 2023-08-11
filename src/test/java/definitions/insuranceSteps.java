@@ -195,7 +195,7 @@ public class insuranceSteps {
         assertThat(actualEmail).isEqualTo(email);
     }
 
-passwordFieldObjectOrientedMethodTesting
+
     @Then("I fill out the password field with various outlines")
     public void iFillOutThePasswordFieldWithVariousOutlines() throws InterruptedException
     {
@@ -235,5 +235,4 @@ passwordFieldObjectOrientedMethodTesting
 //        Assertions.assertThat(page.EmailMessageFormat().isDisplayed()).isFalse();
 
     }
- main
 }
