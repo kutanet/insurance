@@ -35,8 +35,7 @@ public class insuranceSteps {
     }
 
     @And("I verify that the error message with xpath {string} is not displayed")
-    public void iVerifyThatTheErrorMessageWithXpathIsNotDisplayed(String xpathVar)
-    {
+    public void iVerifyThatTheErrorMessageWithXpathIsNotDisplayed(String xpathVar) {
         // The 1st variant
         boolean result = getDriver().findElements(By.xpath(xpathVar)).isEmpty();
         assertThat(result).isTrue();
@@ -65,19 +64,19 @@ public class insuranceSteps {
 
     @Then("I fill out the name field with {string}")
     public void iFillOutTheNameFieldWith(String nameVariable) {
-        MainPage page=new MainPage();
+        MainPage page = new MainPage();
         page.fillName(nameVariable);
     }
 
     @Then("I fill out the zip code field with {string}")
     public void iFillOutTheZipCodeFieldWith(String zipVariable) {
-        MainPage page=new MainPage();
+        MainPage page = new MainPage();
         page.fillZipCodeField(zipVariable);
     }
 
     @Then("I choose USA from the country list")
     public void iChooseUSAFromTheCountryList() {
-        MainPage page1=new MainPage();
+        MainPage page1 = new MainPage();
         page1.chooseUSA();
     }
 
@@ -199,14 +198,12 @@ public class insuranceSteps {
 
 
     @Then("I fill out the password field with various outlines")
-    public void iFillOutThePasswordFieldWithVariousOutlines()
-    {
+    public void iFillOutThePasswordFieldWithVariousOutlines() {
         new MainPage().fillOutPasswordField();
     }
 
     @And("I verify that the review page is open")
-    public String iVerifyThatTheReviewPageIsOpen() throws InterruptedException
-    {
+    public String iVerifyThatTheReviewPageIsOpen() throws InterruptedException {
 
         return getDriver().getTitle();
         //titleVerification
@@ -221,7 +218,7 @@ public class insuranceSteps {
 
     @And("I verify that the review page is opened")
     public void iVerifyThatTheReviewPageIsOpened() {
-        ConfirmationPage page=new ConfirmationPage();
+        ConfirmationPage page = new ConfirmationPage();
         Assertions.assertThat("Emergency app - learning html test app").isEqualTo(page.getTitle());
     }
 
@@ -232,7 +229,7 @@ public class insuranceSteps {
 
     @And("I verify that email format error message is not displayed")
     public void iVerifyThatEmailFormatErrorMessageIsNotDisplayed() {
-        MainPage page =new MainPage();
+        MainPage page = new MainPage();
         assertThat(page.isEmailFormatMessagePresents()).isFalse();
 
 
@@ -240,18 +237,36 @@ public class insuranceSteps {
 
     @Then("I fill out all required fields from {string} file")
     public void iFillOutAllRequiredFieldsFromFile(String fileName) {
-        Map<String,String> user =getDataFromYMLFile(fileName);
+        Map<String, String> user = getDataFromYMLFile(fileName);
         MainPage page = new MainPage();
+        page.waitForEmailField();
         page.fillName(user.get("name"));
         page.chooseCountry(user.get("country"));
         page.fillZipCodeField(user.get("zipcode"));
+        page.fillStreetField(user.get("street"));
+        page.fillAptField(user.get("apt"));
+        page.fillCityField(user.get("city"));
+        page.fillStateField(user.get("state"));
+        page.fillUsernameField(user.get("username"));
+        page.fillPasswordField(user.get("password"));
+        page.fillReEnterPasswordField(user.get("password"));
+        page.fillEmailField(user.get("email"));
+        page.fillPhoneNumberField(user.get("phoneNumber"));
+        page.fillDateOfBirthField(user.get("dateOfBirth"));
+        page.chooseMaleGender();// Need to add method
+        List<String> products=List.of(user.get("products"));
+        page.chooseProductsFromList(products);
+
+
+
+
 
 
     }
 
     @And("I verify that email format error message is displayed")
     public void iVerifyThatEmailFormatErrorMessageIsDisplayed() {
-        MainPage page =new MainPage();
+        MainPage page = new MainPage();
         assertThat(page.isEmailFormatMessagePresents()).isTrue();
     }
 
@@ -261,9 +276,10 @@ public class insuranceSteps {
         new MainPage().fillOutAllTheFieldsExceptPW_WithValidData();
         //This will fill all the required fields except password&retype_password fields
 
-    @Then("I fill out state field with invalid data")
-    public void iFillOutStateFieldWithInvalidData() throws InterruptedException {
-        new MainPage().fillOutStateFieldWithInvalidData();
-
+//        @Then("I fill out state field with invalid data")
+//        public void iFillOutStateFieldWithInvalidData() throws InterruptedException {
+//            new MainPage().fillOutStateFieldWithInvalidData();
+//
+//        }
     }
 }

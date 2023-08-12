@@ -1,9 +1,10 @@
 @predefined_Password_Test_Outlines # Author Ruslan
 Feature: Password Outline
   Scenario:  Insurance password smoke test - Password Field Testing
-    Given I open url "http://154.41.228.85/dashboard/"
+    Given I Launch insurance page
     Then I fill out the password field with various outlines
     Then I wait for 1 sec
+    Then I fill out all the fields with valid data
     Then I fill out the rest of the required fields except password&retype_password
     #this line is added new
     Then I click on element with xpath "//input[@id='agreement']"

@@ -8,10 +8,10 @@ city: New York
 state: New York
 username: sherlock_holmes
 password: pass!
-email: sherlock@mail.com
+email: sherlockmail.com
 phoneNumber: "+1 818 4800516"
 dateOfBirth: 01/06/1856
 gender: male
 products: auto
 emergencyContactName: Dr. John H. Watson
-emergencyContactPHONE: +1 818 234 2334  
+emergencyContactPHONE: +1 818 234 2334

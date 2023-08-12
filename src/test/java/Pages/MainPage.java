@@ -89,6 +89,7 @@ public class MainPage extends Page {
 
     public void fillName(String nameOfaClient){
 
+
         nameField.click();
         nameField.clear();
         nameField.sendKeys(nameOfaClient);
@@ -284,9 +285,9 @@ public class MainPage extends Page {
             List<String> policies = Stream.of("auto", "home", "life").toList();
             chooseProductsFromList(policies);
 
-    public boolean isEmailMandatoryMessagePresents()
-    {
-        return isElementPresent(emailMandatoryErrorMessage);
+//    public boolean isEmailMandatoryMessagePresents()
+//    {
+//        return isElementPresent(emailMandatoryErrorMessage);
 
 
 
