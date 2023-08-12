@@ -68,8 +68,10 @@ public class MainPage extends Page {
     private WebElement emergencyNameField;
     @FindBy(id = "Phone")
     private WebElement emergencyPhoneField;
-   @FindBy(xpath = "//small[normalize-space()='The email must be a valid email address.']")
+    @FindBy(xpath = "//small[normalize-space()='The email must be a valid email address.']")
     private WebElement emailFormatErrorMessage;
+    @FindBy(xpath = "//small[normalize-space()='The email field is required.']")
+    private WebElement emailMandatoryErrorMessage;
 
 
 
@@ -212,7 +214,6 @@ public class MainPage extends Page {
         submitButton.click();
 
     }
-
     public void fillOutAllTheFieldsWithValidData() throws InterruptedException {
         nameField.sendKeys("Sherlock Holmes");
         chooseUSA();
@@ -241,12 +242,11 @@ public class MainPage extends Page {
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='email']")));
 
     }
-//    public boolean  emailMessageFormat(){
-//
-//        return assertThat(emailFormatErrorMessage.isDisplayed()).isFalse();
-//
-//    }
-
+    public boolean emailMessageFormat()
+    {
+       // return assertThat(emailFormatErrorMessage.isDisplayed()).isFalse();
+        return false;
+    }
 
     public void fillOutPasswordField(){
 
@@ -256,9 +256,9 @@ public class MainPage extends Page {
     }
 
     public boolean isEmailFormatMessagePresents(){
-
        return isElementPresent(emailFormatErrorMessage);
     }
+
     public void chooseCountry(String country){
 //        countrySelection.click();
         Select list=new Select(countrySelection);
@@ -266,7 +266,10 @@ public class MainPage extends Page {
 
     }
 
-
+    public boolean isEmailMandatoryMessagePresents()
+    {
+        return isElementPresent(emailMandatoryErrorMessage);
+    }
 
 }
 
