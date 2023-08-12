@@ -5,6 +5,7 @@ Feature: Password Outline
     Then I fill out the password field with various outlines
     Then I wait for 1 sec
     Then I fill out the rest of the required fields except password&retype_password
+    #this line is added new
     Then I click on element with xpath "//input[@id='agreement']"
     Then I click on element with xpath "//button[normalize-space()='Submit form']"
     Then I wait for 1 sec
