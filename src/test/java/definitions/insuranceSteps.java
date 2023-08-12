@@ -255,4 +255,9 @@ public class insuranceSteps {
         MainPage page =new MainPage();
         assertThat(page.isEmailFormatMessagePresents()).isTrue();
     }
+
+    @Then("I fill out state field with invalid data")
+    public void iFillOutStateFieldWithInvalidData() throws InterruptedException {
+        new MainPage().fillOutStateFieldWithInvalidData();
+    }
 }
