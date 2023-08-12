@@ -199,10 +199,9 @@ public class insuranceSteps {
 
 
     @Then("I fill out the password field with various outlines")
-    public void iFillOutThePasswordFieldWithVariousOutlines() throws InterruptedException
+    public void iFillOutThePasswordFieldWithVariousOutlines()
     {
         new MainPage().fillOutPasswordField();
-        Thread.sleep(5000);
     }
 
     @And("I verify that the review page is open")
@@ -256,8 +255,15 @@ public class insuranceSteps {
         assertThat(page.isEmailFormatMessagePresents()).isTrue();
     }
 
+
+    @Then("I fill out the rest of the required fields except password&retype_password")
+    public void iFillOutTheRestOfTheRequiredFieldsExceptPasswordRetype_password() {
+        new MainPage().fillOutAllTheFieldsExceptPW_WithValidData();
+        //This will fill all the required fields except password&retype_password fields
+
     @Then("I fill out state field with invalid data")
     public void iFillOutStateFieldWithInvalidData() throws InterruptedException {
         new MainPage().fillOutStateFieldWithInvalidData();
+
     }
 }

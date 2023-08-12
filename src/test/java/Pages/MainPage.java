@@ -266,12 +266,34 @@ public class MainPage extends Page {
 
     }
 
+
+
+    public void fillOutAllTheFieldsExceptPW_WithValidData() {
+            nameField.sendKeys("Sherlock Holmes");
+            chooseUSA();
+            zipCodeField.sendKeys("94022");
+            streetField.sendKeys("BakerStreet");
+            suiteField.sendKeys("2363");
+            cityField.sendKeys("LosAngeles");
+            stateField.sendKeys("California");
+            usernameField.sendKeys("userclient");
+            emailField.sendKeys("mail@mail.com");
+            phoneNumberField.sendKeys("+1234568797");
+            dateOfBirthField.sendKeys("06/01/1982");
+            chooseMaleGender();
+            List<String> policies = Stream.of("auto", "home", "life").toList();
+            chooseProductsFromList(policies);
+
     public boolean isEmailMandatoryMessagePresents()
     {
         return isElementPresent(emailMandatoryErrorMessage);
-    }
 
-}
+
+
+        }
+
+        //This method fills all required fields except password
+    }
 
 
 
