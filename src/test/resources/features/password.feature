@@ -12,4 +12,5 @@ Feature: Password Outline
     Then I capture the alert message and make sure that it contains "Form contains errors"
     Then I accept alert
     Then I submit form
+    Then I verify that the review page is opened
 

@@ -270,18 +270,18 @@ public class MainPage extends Page {
     public void fillOutAllTheFieldsExceptPW_WithValidData() {
             nameField.sendKeys("Sherlock Holmes");
             chooseUSA();
-            zipCodeField.sendKeys("92100");
+            zipCodeField.sendKeys("94022");
             streetField.sendKeys("BakerStreet");
-            suiteField.sendKeys("100");
-            cityField.sendKeys("London");
-            stateField.sendKeys("LondonDC");
-            usernameField.sendKeys("user");
+            suiteField.sendKeys("2363");
+            cityField.sendKeys("LosAngeles");
+            stateField.sendKeys("California");
+            usernameField.sendKeys("userclient");
             emailField.sendKeys("mail@mail.com");
-            phoneNumberField.sendKeys("+442012431234");
+            phoneNumberField.sendKeys("+1234568797");
             dateOfBirthField.sendKeys("06/01/1982");
             chooseMaleGender();
-            List<String> counries = Stream.of("auto", "home", "life").toList();
-            chooseProductsFromList(counries);
+            List<String> policies = Stream.of("auto", "home", "life").toList();
+            chooseProductsFromList(policies);
 
 
         }
