@@ -267,8 +267,27 @@ public class MainPage extends Page {
     }
 
 
+    public void fillOutAllTheFieldsExceptPW_WithValidData() {
+            nameField.sendKeys("Sherlock Holmes");
+            chooseUSA();
+            zipCodeField.sendKeys("92100");
+            streetField.sendKeys("BakerStreet");
+            suiteField.sendKeys("100");
+            cityField.sendKeys("London");
+            stateField.sendKeys("LondonDC");
+            usernameField.sendKeys("user");
+            emailField.sendKeys("mail@mail.com");
+            phoneNumberField.sendKeys("+442012431234");
+            dateOfBirthField.sendKeys("06/01/1982");
+            chooseMaleGender();
+            List<String> counries = Stream.of("auto", "home", "life").toList();
+            chooseProductsFromList(counries);
 
-}
+
+        }
+
+        //This method fills all required fields except password
+    }
 
 
 

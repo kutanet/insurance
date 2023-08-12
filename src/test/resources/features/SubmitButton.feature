@@ -26,6 +26,7 @@ Feature: Smoke steps
     Then I type "2024561414" into element with id "Phone"
     Then I switch to default content
     Then I click on element with xpath "//button[contains(text(), 'Submit form')]"
+    Then I wait for 3 sec
     Then I capture the alert message and make sure that it contains "Please accept agreement"
 
 
