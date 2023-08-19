@@ -263,7 +263,7 @@ public class MainPage extends Page {
     public void chooseCountry(String country){
 //        countrySelection.click();
         Select list=new Select(countrySelection);
-        list.selectByValue(country.toLowerCase());
+        list.selectByValue(country);
 
     }
 
