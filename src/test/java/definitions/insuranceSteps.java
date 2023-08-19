@@ -1,8 +1,8 @@
 package definitions;
 
-import Pages.ConfirmationPage;
-import Pages.MainPage;
+import Pages.*;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.*;
@@ -281,5 +281,35 @@ public class insuranceSteps {
 //            new MainPage().fillOutStateFieldWithInvalidData();
 //
 //        }
+    }
+
+    @Given("I open a dice login page")
+    public void iOpenADicePage() {
+        DiceStartPage page = new DiceStartPage();
+        Page.open();
+    }
+
+    @And("I fill out credentials from {string} file")
+    public void iFillOutCredentialsFromFile(String filename) {
+        Map<String, String> user = getDataFromYMLFile(filename);
+        DiceStartPage page = new DiceStartPage();
+//        page.waitForEmailField();
+        page.fillEmail(user.get("email"));
+        page.fillPassword(user.get("password"));
+        page.submit();
+
+    }
+
+    @And("I move to profile page")
+    public void iMoveToProfilePage() {
+        DiceProfilePage page =new DiceProfilePage();
+        Page.open();
+    }
+
+    @And("I click edit button")
+    public void iClickEditButton() {
+        DiceProfilePage page=new DiceProfilePage();
+        page.expandRootElement();
+
     }
 }

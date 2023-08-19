@@ -14,3 +14,5 @@ Feature: Smoke steps
     Then I fill out all required fields from "User1" file
     Then I verify that email format error message is displayed
     And I wait for 1 sec
+
+
